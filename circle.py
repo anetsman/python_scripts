@@ -1,4 +1,4 @@
-#!/usr/bin env python
+#!/usr/bin/env python
 
 r = 0
 PI = 3.14159
