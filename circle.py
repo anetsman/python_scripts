@@ -1,3 +1,5 @@
+#!/usr/bin env python
+
 r = 0
 PI = 3.14159
 # Formula for the area of a circle given its radius
