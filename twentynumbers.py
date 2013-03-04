@@ -9,9 +9,9 @@ while all <= 10:
 		min = num
 		max = num
 	else:
-		if min > num:
+		if num < min:
 			min = num
-		elif max < num:
+		elif num > max:
 			max = num
 	all += 1
 	average = sum/all			
