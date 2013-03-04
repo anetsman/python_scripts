@@ -14,6 +14,5 @@ while all <= 10:
 		elif max < num:
 			max = num
 	all += 1
-			
-			
-print(sum, max, min)
+	average = sum/all			
+print(sum, max, min, average)
