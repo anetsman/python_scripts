@@ -2,11 +2,10 @@
 
 all = 0
 sum = 0
-if all == 0:
-	num = eval(input("Enter the float-point number: "))
-	min = num
-	max = num
-while all <= 10: 
+num = eval(input("Enter the float-point number: "))
+min = num
+max = num
+while all <= 20: 
 	num = eval(input("Enter the float-point number: "))
 	sum += num
 	if min > num:
@@ -15,4 +14,4 @@ while all <= 10:
 		max = num
 	all += 1
 	average = sum/all		
-print(sum, max, min, average)
+print('Sum = ',sum, 'Max value = ',max, 'Min value = ',min, 'Average = ',average)
