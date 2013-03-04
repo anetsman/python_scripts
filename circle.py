@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+#QUEST what does this line do?
 r = 0
+
 PI = 3.14159
 # Formula for the area of a circle given its radius
 
