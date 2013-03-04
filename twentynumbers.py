@@ -2,17 +2,17 @@
 
 all = 0
 sum = 0
+if all == 0:
+	num = eval(input("Enter the float-point number: "))
+	min = num
+	max = num
 while all <= 10: 
 	num = eval(input("Enter the float-point number: "))
 	sum += num
-	if all == 0:
+	if min > num:
 		min = num
+	elif max < num:
 		max = num
-	else:
-		if num < min:
-			min = num
-		elif num > max:
-			max = num
 	all += 1
-	average = sum/all			
+	average = sum/all		
 print(sum, max, min, average)
