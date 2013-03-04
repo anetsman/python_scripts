@@ -5,7 +5,7 @@ sum = 0
 num = eval(input("Enter the float-point number: "))
 min = num
 max = num
-while all <= 20: 
+while all <= 19: 
 	num = eval(input("Enter the float-point number: "))
 	sum += num
 	if min > num:
