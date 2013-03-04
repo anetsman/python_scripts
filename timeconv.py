@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 
 seconds = eval(input('enter the number of seconds:')
 hours = seconds//3600

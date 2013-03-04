@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-
-n, N = eval(input())
+n1, n2 = eval(input())
 print(n1 + n2)
 print(n1 + n2/2)
 d1 = 0
