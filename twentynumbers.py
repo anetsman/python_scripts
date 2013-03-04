@@ -5,7 +5,7 @@ sum = 0
 num = eval(input("Enter the float-point number: "))
 min = num
 max = num
-while all <= 19: 
+while all <= 19 and num >= 0: 
 	num = eval(input("Enter the float-point number: "))
 	sum += num
 	if min > num:
@@ -13,5 +13,5 @@ while all <= 19:
 	elif max < num:
 		max = num
 	all += 1
-	average = sum/all		
+	average = sum/(all+1)		
 print('Sum = ',sum, 'Max value = ',max, 'Min value = ',min, 'Average = ',average)
