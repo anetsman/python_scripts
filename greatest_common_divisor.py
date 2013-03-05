@@ -11,4 +11,4 @@ def gcd(num1, num2):
 			largestFactor = i # Found larger factor
 			print(largestFactor)
 	return largestFactor
-gcd(num1, num2)
+print(gcd(36, 24))
