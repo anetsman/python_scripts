@@ -5,6 +5,7 @@ from random import randrange
 def mc():
 	column = eval(input("enter number of counts: "))
 	row = eval(input("enter number of rows: "))
+	li = list()
 	for c in range (1, row + 1):
 		l = list()
 		a = 0
@@ -13,8 +14,8 @@ def mc():
 			l += [b]
 			a += 1
 		print(l)
-		li = list()
 		li += l
 	return li
-mc()
-print(li)
+lis = list()
+lis = mc()
+print(lis)
