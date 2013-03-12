@@ -3,9 +3,9 @@
 from random import randrange
 
 def mc():
+	li = []
 	column = eval(input("enter number of counts: "))
 	row = eval(input("enter number of rows: "))
-	li = list()
 	for c in range (1, row + 1):
 		l = list()
 		a = 0
@@ -16,6 +16,23 @@ def mc():
 		print(l)
 		li += l
 	return li
-lis = list()
-lis = mc()
-print(lis)
+li = mc()
+listm = []
+print(li)
+#li.sort()
+min = li[0]
+max = li[0]
+for i in li:
+	if i <= min:
+		min = i
+		listm.insert(0, i)
+	elif i > max:
+		max = i
+		listm.append(i) 
+		print(listm)
+	else:
+		maxx = len(listm)
+		for c in listm:
+			if c < maxx:
+				listm.insert(listm.index(c), i)
+print(listm)
