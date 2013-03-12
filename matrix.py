@@ -4,7 +4,7 @@ from random import randrange
 
 def mc():
 	li = []
-	column = eval(input("enter number of counts: "))
+	column = eval(input("enter number of columns: "))
 	row = eval(input("enter number of rows: "))
 	for c in range (1, row + 1):
 		l = list()
@@ -19,9 +19,11 @@ def mc():
 li = mc()
 listm = []
 print(li)
+
 #li.sort()
 min = li[0]
 max = li[0]
+
 for i in li:
 	if i <= min:
 		min = i
