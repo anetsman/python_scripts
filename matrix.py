@@ -33,7 +33,7 @@ for i in li:
 		listm.append(i) 
 		print(listm)
 	else:
-		maxx = len(listm)
+		maxx = listm[len(listm)]
 		for c in listm:
 			if c < maxx:
 				listm.insert(listm.index(c), i)
