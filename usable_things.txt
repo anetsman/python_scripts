@@ -1,0 +1,5 @@
+﻿lists sort
+
+http://younglinux.info/algorithm/bubble
+http://py-algorithm.blogspot.com/2012/01/blog-post.html
+http://py-algorithm.blogspot.com/2011/10/blog-post.html
