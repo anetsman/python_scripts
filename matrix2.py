@@ -25,10 +25,11 @@ def mc():
 			k += 1
 		k = 0
 		n += 1
-	def dlist():
-		return [li[i:i + row] for i in range (0, len(li), row)
-	li = dlist()
+#	def dlist():
+#		return [li[i:i + row]] for i in range (0, len(li), row)
+#	li = dlist()
+	for i in range (0, len(li), row):
+		li = [li[i:i + row]]
 	return li
 li = mc()
 print(li)
-
