@@ -15,9 +15,9 @@ def mc():
 			a += 1
 		print(l)
 		li += l
+	li = [li[i:i + row] for i in range (0, len(li), row)	
 	return li
 li = mc()
-listm = []
 print(li)
 k = 0
 n = 1
