@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+1
 from random import randrange
 
 def mc():
