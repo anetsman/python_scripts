@@ -22,14 +22,20 @@ def mc():
 #       for i in range (0, len(li), row):
 #               li = [li[i:i + row]]
         return matrix
-li = mc()
-k = 0
-n = 1
-while n < len(li):
-        while k < (len(li)-n):
-                if li[k] > li[k+1]:
-                        li[k], li[k+1] = li[k+1], li[k]
-                k += 1
-        k = 0
-        n += 1
-print(li)
+matrix = mc()
+for i in matrix:
+	i.sort()
+	while i < len(matrix):
+		for j in i:
+			min = matrix [0][0]
+			
+#k = 0
+#n = 1
+#while n < len(matrix):
+#        while k < (len(matrix)-n):
+#                if matrix[k] > matrix[k+1]:
+#                        matrix[k], matrix[k+1] = matrix[k+1], matrix[k]
+#                k += 1
+#        k = 0
+#        n += 1
+print(matrix)
