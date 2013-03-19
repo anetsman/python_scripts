@@ -24,10 +24,20 @@ def mc():
 matrix = mc()
 for i in matrix:
 	i.sort()
-	while i < len(matrix):
-		for j in i:
-			min = matrix [0][0]
-			
+x = 0
+j = 0
+k = 0
+while x < (len(matrix) - 1):
+	for i in matrix:
+		while j < len(i):
+			if matrix[k][j] > matrix[k+1][j]:
+				matrix[k][j], matrix[k+1][j] = matrix[k+1][j], matrix [k][j]
+			else:
+				break
+				j += 1
+	j = 0
+	k += 1
+	x += 1
 #k = 0
 #n = 1
 #while n < len(matrix):
