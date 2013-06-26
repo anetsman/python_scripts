@@ -1,0 +1,54 @@
+#! /usr/bin/python
+ 
+import dateutil.parser
+from datetime import datetime
+import datetime
+try:
+  from xml.etree import ElementTree # for Python 2.5 users
+except ImportError:
+  from elementtree import ElementTree
+import gdata.calendar.service
+import gdata.service
+import atom.service
+import gdata.calendar
+import atom
+import getopt
+import sys
+import string
+import time
+ 
+today = datetime.date.today()
+tomorrow = today + datetime.timedelta(days=1)
+start_date=str(today)
+end_date=str(tomorrow)
+ 
+calendar_service = gdata.calendar.service.CalendarService()
+calendar_service.email = '@gmail.com'
+calendar_service.password = 'pass'
+calendar_service.source = 'Google-Calendar_Python_Sample-1.0'
+calendar_service.ProgrammaticLogin()
+ 
+def DateRangeQuery(calendar_service, start_date, end_date):
+        print 'Date range query for events on Primary Calendar: %s to %s' % (start_date, end_date,)
+        query = gdata.calendar.service.CalendarEventQuery('default', 'private', 'full')
+        query.start_min = start_date
+        query.start_max = end_date
+        feed = calendar_service.CalendarQuery(query)
+        for i, an_event in enumerate(feed.entry):
+                print '\t%s. %s' % (i, an_event.title.text,)
+                for a_when in an_event.when:
+                        print '\t\tStart time: %s' % (a_when.start_time,)
+                        print '\t\tEnd time:   %s' % (a_when.end_time,)
+                now = datetime.datetime.now()
+                st = dateutil.parser.parse(a_when.start_time)
+                start_time = st.strftime('%Y %b %d %H:%M:%S')
+                et = dateutil.parser.parse(a_when.end_time)
+                end_time = et.strftime('%Y %b %d %H:%M:%S')
+                start_time_str = datetime.datetime.strptime(start_time, '%Y %b %d %H:%M:%S')
+                end_time_str = datetime.datetime.strptime(end_time, '%Y %b %d %H:%M:%S')
+        print start_time, type(start_time_str)
+        print end_time, type(end_time)
+        if now >= start_time_str and now <= end_time_str:
+                print '%s is on dutynow' % (an_event.title.text,)
+ 
+DateRangeQuery(calendar_service, start_date, end_date)
